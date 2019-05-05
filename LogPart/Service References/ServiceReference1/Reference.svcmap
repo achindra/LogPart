@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b3ad2947-904b-41cf-8c1b-19dd9cd62647" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://gesblr3/lsr-service/Classification.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Classification.wsdl" MetadataType="Wsdl" ID="34974ebd-c5ba-43c9-9d52-075b89994ec9" SourceId="1" SourceUrl="http://gesblr3/LSR-Service/Classification.svc?wsdl" />
+    <MetadataFile FileName="Classification.xsd" MetadataType="Schema" ID="1b18ebbc-f633-40fb-949b-b8ef90d4f212" SourceId="1" SourceUrl="http://gesblr3/LSR-Service/Classification.svc?xsd=xsd3" />
+    <MetadataFile FileName="Classification1.xsd" MetadataType="Schema" ID="08fa1ed6-e7d4-48b2-9ae0-4368ff17ba1a" SourceId="1" SourceUrl="http://gesblr3/LSR-Service/Classification.svc?xsd=xsd2" />
+    <MetadataFile FileName="Classification2.xsd" MetadataType="Schema" ID="bba141a6-c7e8-4ad8-895f-e420e88a4fa9" SourceId="1" SourceUrl="http://gesblr3/LSR-Service/Classification.svc?xsd=xsd1" />
+    <MetadataFile FileName="Classification3.xsd" MetadataType="Schema" ID="ebe0033a-ce76-41ef-b33e-1d7065e59c15" SourceId="1" SourceUrl="http://gesblr3/LSR-Service/Classification.svc?xsd=xsd0" />
+    <MetadataFile FileName="Classification.disco" MetadataType="Disco" ID="6d02aee8-e59b-4204-aefe-f5de4914d12c" SourceId="1" SourceUrl="http://gesblr3/LSR-Service/Classification.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SamplesDBModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="SamplesDBModelStoreContainer">
+          <EntitySet Name="Cluster" EntityType="SamplesDBModel.Store.Cluster" store:Type="Tables" />
+          <EntitySet Name="Features" EntityType="SamplesDBModel.Store.Features" store:Type="Tables" />
+        </EntityContainer>
+        <EntityType Name="Cluster">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="Features">
+          <Key>
+            <PropertyRef Name="fHash" />
+          </Key>
+          <Property Name="Cluster" Type="nvarchar" MaxLength="100" />
+          <Property Name="Hash" Type="nvarchar" MaxLength="100" />
+          <Property Name="fHash" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Stack" Type="nvarchar" MaxLength="1000" />
+          <Property Name="FirstFile" Type="nvarchar" MaxLength="500" />
+          <Property Name="Trainer" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SamplesDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SamplesDBEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Clusters" EntityType="SamplesDBModel.Cluster" />
+          <EntitySet Name="Features" EntityType="SamplesDBModel.Feature" />
+        </EntityContainer>
+        <EntityType Name="Cluster">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Feature">
+          <Key>
+            <PropertyRef Name="fHash" />
+          </Key>
+          <Property Name="Cluster" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Hash" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="fHash" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Stack" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="FirstFile" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Trainer" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SamplesDBModelStoreContainer" CdmEntityContainer="SamplesDBEntities">
+          <EntitySetMapping Name="Clusters">
+            <EntityTypeMapping TypeName="SamplesDBModel.Cluster">
+              <MappingFragment StoreEntitySet="Cluster">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Features">
+            <EntityTypeMapping TypeName="SamplesDBModel.Feature">
+              <MappingFragment StoreEntitySet="Features">
+                <ScalarProperty Name="Cluster" ColumnName="Cluster" />
+                <ScalarProperty Name="Hash" ColumnName="Hash" />
+                <ScalarProperty Name="fHash" ColumnName="fHash" />
+                <ScalarProperty Name="Stack" ColumnName="Stack" />
+                <ScalarProperty Name="FirstFile" ColumnName="FirstFile" />
+                <ScalarProperty Name="Trainer" ColumnName="Trainer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

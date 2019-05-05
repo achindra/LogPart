@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Classification" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:3659/Classification.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:3659/Classification.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:3659/Classification.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LSRService" />
+      <xsd:import schemaLocation="http://localhost:3659/Classification.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Service_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="Service_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="Service_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_GetClusterList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClusterList" />
+  </wsdl:message>
+  <wsdl:message name="Service_GetClusterList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClusterListResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddCluster_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCluster" />
+  </wsdl:message>
+  <wsdl:message name="Service_AddCluster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddClusterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_DiscoverSchema_InputMessage">
+    <wsdl:part name="parameters" element="tns:DiscoverSchema" />
+  </wsdl:message>
+  <wsdl:message name="Service_DiscoverSchema_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DiscoverSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_TrainSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrainSystem" />
+  </wsdl:message>
+  <wsdl:message name="Service_TrainSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrainSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="Service_Transform_InputMessage">
+    <wsdl:part name="parameters" element="tns:Transform" />
+  </wsdl:message>
+  <wsdl:message name="Service_Transform_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransformResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/Service/GetData" message="tns:Service_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Service/GetDataResponse" message="tns:Service_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/Service/GetDataUsingDataContract" message="tns:Service_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Service/GetDataUsingDataContractResponse" message="tns:Service_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClusterList">
+      <wsdl:input wsaw:Action="http://tempuri.org/Service/GetClusterList" message="tns:Service_GetClusterList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Service/GetClusterListResponse" message="tns:Service_GetClusterList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCluster">
+      <wsdl:input wsaw:Action="http://tempuri.org/Service/AddCluster" message="tns:Service_AddCluster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Service/AddClusterResponse" message="tns:Service_AddCluster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DiscoverSchema">
+      <wsdl:input wsaw:Action="http://tempuri.org/Service/DiscoverSchema" message="tns:Service_DiscoverSchema_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Service/DiscoverSchemaResponse" message="tns:Service_DiscoverSchema_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TrainSystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/Service/TrainSystem" message="tns:Service_TrainSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Service/TrainSystemResponse" message="tns:Service_TrainSystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Transform">
+      <wsdl:input wsaw:Action="http://tempuri.org/Service/Transform" message="tns:Service_Transform_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Service/TransformResponse" message="tns:Service_Transform_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_Service" type="tns:Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/Service/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/Service/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClusterList">
+      <soap:operation soapAction="http://tempuri.org/Service/GetClusterList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCluster">
+      <soap:operation soapAction="http://tempuri.org/Service/AddCluster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DiscoverSchema">
+      <soap:operation soapAction="http://tempuri.org/Service/DiscoverSchema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrainSystem">
+      <soap:operation soapAction="http://tempuri.org/Service/TrainSystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transform">
+      <soap:operation soapAction="http://tempuri.org/Service/Transform" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Classification">
+    <wsdl:port name="BasicHttpBinding_Service" binding="tns:BasicHttpBinding_Service">
+      <soap:address location="http://localhost:3659/Classification.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

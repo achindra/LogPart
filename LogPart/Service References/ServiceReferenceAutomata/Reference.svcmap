@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5c2a9a91-8154-4f03-843b-f732361c6d70" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3659/Classification.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Classification.wsdl" MetadataType="Wsdl" ID="2d2b6883-b0c2-4ef0-8d4c-5e90f302370f" SourceId="1" SourceUrl="http://localhost:3659/Classification.svc?wsdl" />
+    <MetadataFile FileName="Classification.xsd" MetadataType="Schema" ID="bebe8670-8caf-408e-8ae0-bdc1beee7fc5" SourceId="1" SourceUrl="http://localhost:3659/Classification.svc?xsd=xsd2" />
+    <MetadataFile FileName="Classification1.xsd" MetadataType="Schema" ID="0ad25214-16d2-4fe9-890f-844c816487d3" SourceId="1" SourceUrl="http://localhost:3659/Classification.svc?xsd=xsd3" />
+    <MetadataFile FileName="Classification2.xsd" MetadataType="Schema" ID="ce0833e6-2c30-4595-bf9c-3373bc24db4f" SourceId="1" SourceUrl="http://localhost:3659/Classification.svc?xsd=xsd0" />
+    <MetadataFile FileName="Classification3.xsd" MetadataType="Schema" ID="568732c0-dfd7-426d-9493-c9db4117be3b" SourceId="1" SourceUrl="http://localhost:3659/Classification.svc?xsd=xsd1" />
+    <MetadataFile FileName="Classification.disco" MetadataType="Disco" ID="d682e846-a968-44d4-8a61-a7f62edc7fca" SourceId="1" SourceUrl="http://localhost:3659/Classification.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
